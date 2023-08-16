@@ -1,0 +1,11 @@
+citHeader("To cite package 'MICSS' in publications, use:")
+
+bibentry(
+  bibtype= "Article",
+  author = c(person(c("J.", "L."), "Carrion-i-Silvestre"),
+             person("Andreu", "Sansó")),
+  title  = "Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series",
+  journal= "Working Paper 2023/09. Research Institute of Applied Economics. University of Barcelona",
+  year   = "2023",
+  textVersion = "Carrion-i-Silvestre, J.l. & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series. Research Institute of Applied Economics. University of Barcelona. Working Paper 2023/09."
+)

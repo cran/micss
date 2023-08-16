@@ -1,0 +1,16 @@
+importFrom("graphics", "lines")
+importFrom("stats", "coef", "lm", "na.omit", "qnorm", "pnorm", "rnorm",
+                "quantile", "resid", "var")
+importFrom("dplyr","lag")
+importFrom("methods", "is")
+export("alpha_hill")
+export("alpha_nr")
+export("kappa_test")
+export("whitening")
+export("lrv.spc.bartlett")
+export("icss")
+export("micss")
+export("plot.icss")
+export("print.icss")
+export("print.micss")
+
