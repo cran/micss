@@ -1,6 +1,6 @@
 \name{alpha_nr}
 \alias{alpha_nr}
-\title{alpha_nr}
+\title{Nicolau & Rodrigues estimator of the tail index}
 \usage{
 alpha_nr(y, k)
 }

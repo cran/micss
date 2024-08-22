@@ -1,7 +1,7 @@
 Package: micss
 Type: Package
 Title: Modified Iterative Cumulative Sum of Squares Algorithm
-Version: 0.1.5
+Version: 0.2.0
 Authors@R: c(person("Josep Lluís", "Carrion-i-Silvestre", role = "aut", email = "carrion@ub.edu"),
              person("Andreu", "Sansó", role = c("aut","cre"), email = "andreu.sanso@uib.eu"))
 Maintainer: Andreu Sansó <andreu.sanso@uib.eu>
@@ -27,8 +27,8 @@ RoxygenNote: 7.2.3
 Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2023-08-16 08:02:57 UTC; HP
+Packaged: 2024-08-22 11:00:17 UTC; HP
 Author: Josep Lluís Carrion-i-Silvestre [aut],
   Andreu Sansó [aut, cre]
 Repository: CRAN
-Date/Publication: 2023-08-16 09:52:37 UTC
+Date/Publication: 2024-08-22 18:50:02 UTC

@@ -13,4 +13,7 @@ export("micss")
 export("plot.icss")
 export("print.icss")
 export("print.micss")
+export("cv.kappa")
+export("p.val.kappa")
+export("estimate.alpha")
 

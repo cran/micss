@@ -1,6 +1,6 @@
 \name{alpha_hill}
 \alias{alpha_hill}
-\title{alpha_hill}
+\title{Hill's estimator of the tail index}
 \usage{
 alpha_hill(x, k)
 }

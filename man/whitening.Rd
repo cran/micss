@@ -1,6 +1,6 @@
 \name{whitening}
 \alias{whitening}
-\title{whitening}
+\title{Whitening}
 \usage{
 whitening(y, kmax = NULL)
 }
@@ -21,7 +21,7 @@ If not specified uses [12*(t/100)^(1/4)].}
 Eliminates the autocorrelation of a variable using an AR model.
 }
 \details{
-Selects the model using the Bayes Information Criteria.
+Selects the model using the Bayes Information Criterium.
 }
 \examples{
 whitening(rnorm(100))

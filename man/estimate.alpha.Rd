@@ -13,7 +13,7 @@ estimate.alpha(x, sig.lev = 0.05, tail.est = "Hill", k = 0.1)
 
 \item{tail.est}{Estimator of the tail index. The default value is "Hill", which uses Hill's (1975) estimator. "NR" uses Nicolau & Rodrigues (2019) estimator.}
 
-\item{k}{Fraction of the upper tail to be used to estimate of the tail index.}
+\item{k}{Fraction of the upper tail to be used to estimate of the tail index. The default value is 0.1.}
 }
 \value{
 \itemize{

@@ -4,7 +4,7 @@
 ## J.L. Carrion-i-Silvestre and A. Sanso (2023): Generalized Extreme Value
 ##    Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
 ##
-## 30 / 7 / 2023
+## 22 / 8 / 2024
 ##
 
 ##
@@ -44,9 +44,6 @@ kappa_test <- function(e,sig.lev=0.05,alpha=NULL,kmax=NULL){
 #'
 #' @references
 #' J.L. Carrion-i-Silvestre & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
-#'
-#' @keywords internal
-
 cv.kappa <- function(t,alpha,sig.lev){
   loc <- sr_loc(t,alpha)
   sc <- sr_scale(t,alpha)
@@ -70,8 +67,6 @@ cv.kappa <- function(t,alpha,sig.lev){
 #'
 #' @references
 #' J.L. Carrion-i-Silvestre & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
-#'
-#' @keywords internal
 p.val.kappa <- function(x,t,alpha){
   loc <- sr_loc(t,alpha)
   sc <- sr_scale(t,alpha)
@@ -100,11 +95,11 @@ p.val.kappa <- function(x,t,alpha){
 #' @keywords internal
 sr_loc <- function(t,alpha,lmax=NULL){
   if (is.null(lmax)) lmax <- floor(12*(t/100)^(1/4))
-  b <- c(7.428131e-01,-5.386952e-02,1.906445e-02,-1.358935e-03,
-         3.594350,-1.216379e+02,1.258597e+03,-3.416918e-01,
-         6.286310e-01,-3.392324e-01,3.162517e+01)
+  b <- c(0.65259704, 0.04562764, -0.01383362, 0.00225625, 14.16896288,
+         -207.90049304, 2727.17596466, -0.49869921, -8.97848800, 2.76757281,
+         -0.34111815, 56.98359116, -459.57507997)
   reg <- c(1,alpha,alpha^2,alpha^3,1/t,1/t^2,1/t^3,1/lmax,
-           alpha/t,alpha^2/t,alpha/t^2)
+           alpha/t,alpha^2/t,alpha^3/t,alpha/t^2,alpha/t^3)
   return(sum(b*reg))
 }
 
@@ -127,11 +122,11 @@ sr_loc <- function(t,alpha,lmax=NULL){
 #' @keywords internal
 sr_scale <- function(t,alpha,lmax=NULL){
   if (is.null(lmax)) lmax <- floor(12*(t/100)^(1/4))
-  b <- c(8.508460e-02,1.018279e-01,-3.171846e-02,3.800244e-03,
-         1.684208e+01,-4.080742e+02,3.683425e+03,-5.104544e-01,
-         -3.426550,7.149008e+01)
+  b <- c(8.877180e-02, 8.267183e-02, -2.451618e-02, 2.988705e-03, 1.671469e+01,
+         -4.570808e+02, 4.844240e+03, -2.905970e-01,  -3.795325e+00,
+         1.003749e+02, -5.433761e+02)
   reg <- c(1,alpha,alpha^2,alpha^3,1/t,1/t^2,1/t^3,1/lmax,
-           alpha/t,alpha/t^2)
+           alpha/t,alpha/t^2,alpha/t^3)
   return(sum(b*reg))
 }
 
@@ -154,11 +149,14 @@ sr_scale <- function(t,alpha,lmax=NULL){
 #' @keywords internal
 sr_shape <- function(t,alpha,lmax=NULL){
   if (is.null(lmax)) lmax <- floor(12*(t/100)^(1/4))
-  b <- c(8.640358e-01,-7.356562e-01,2.516790e-01,-3.017798e-02,
-         3.076360e+01,-1.264638e+03,1.620025e+04,-9.650881e-01,
-         -4.956778,2.510715e+02,-2.373360e+03)
-  reg <- c(1,alpha,alpha^2,alpha^3,1/t,1/t^2,1/t^3,1/lmax,
-           alpha/t,alpha/t^2,alpha/t^3)
+  b <- c(5.662565e-01, -5.384247e-01, 1.590511e-01, -1.592778e-02,
+         -2.555037e+00, -9.944793e+03, 9.577819e+05, -2.857244e+07,
+         2.747189e+08, 6.279446e-01, 5.954574e+01, -1.062508e+03,
+         -1.882937e+05, 7.263533e+06, -6.993028e+07, -1.512258e+01,
+         9.370222e+02, -1.417866e+04)
+  reg <- c(1,alpha,alpha^2,alpha^3,1/t,1/t^2,1/t^3,1/t^4,1/t^5,
+           1/lmax,alpha/t,alpha/t^2,alpha/t^3,alpha/t^4,alpha/t^5,
+           alpha^2/t,alpha^2/t^2,alpha^2/t^3)
   return(sum(b*reg))
 }
 
@@ -181,7 +179,7 @@ micss <- function(e,sig.lev=0.05,kmax=NULL,alpha=NULL,
   return(bbm)
 }
 
-#' @title print.micss
+#' @title Prints the output of of icss algorithm
 #'
 #' @description Prints the output of \link{micss}.
 #'
@@ -491,7 +489,7 @@ step3 <- function(e,bb,sig.lev,kmax,alpha){
   return(list(nb=nb,tb=tb))
 }
 
-#' @title plot.icss
+#' @title Plots the output of the ICSS algorithm
 #'
 #' @description Plots the output of the ICSS algorithm.
 #'
@@ -563,7 +561,7 @@ taula.icss <- function(x){
   return(taula)
 }
 
-#' @title print.icss
+#' @title Prints the output of of icss algorithm
 #'
 #' @description Prints the output of \link{icss}.
 #'
@@ -622,7 +620,7 @@ var.est.icss <- function(x){
 #' @param x A numeric vector.
 #' @param sig.lev Significance level. The default value is 0.05.
 #' @param tail.est Estimator of the tail index. The default value is "Hill", which uses Hill's (1975) estimator. "NR" uses Nicolau & Rodrigues (2019) estimator.
-#' @param k Fraction of the upper tail to be used to estimate of the tail index.
+#' @param k Fraction of the upper tail to be used to estimate of the tail index. The default value is 0.1.
 #' @return
 #' \itemize{
 #'   \item \code{alpha}: Value of the tail index (alpha) to be used in \link{micss}.
@@ -637,8 +635,6 @@ var.est.icss <- function(x){
 #' B. Hill (1975): A Simple General Approach to Inference About the Tail of a Distribution. The Annals of Mathematical Statistics 3, 1163-1174.
 #'
 #' J. Nicolau and P.M.M. Rodrigues (2019): A new regression-based tail index estimator. The Review of Economics and Statistics 101, 667-680.
-#'
-#' @keywords internal
 estimate.alpha<-function(x,sig.lev=0.05,tail.est="Hill",k=0.1){
   if (tail.est=="NR") {
     alpha.fit <- alpha_nr(x,k)
@@ -728,7 +724,7 @@ whitening <- function(y,kmax=NULL){
   return(list(e=res,rho=rho,lag=k))
 }
 
-#' @title lrv.spc.bartlett
+#' @title Estimator of the long-run variance using the Barlett window
 #'
 #' @description Estimation of the long-run variance using the Barlett window.
 #'
