@@ -19,7 +19,7 @@ micss(e,sig.lev=0.05,kmax=NULL,alpha=NULL,tail.est="NR",k=0.1)
   \item{icss}{An object with the output of the \link{icss} algorithm.}
   \item{alpha}{An object with the output of the \link{estimate.alpha}.}
 }
-\references{J.L. Carrion-i-Silvestre & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
+\references{J.L. Carrion-i-Silvestre & A. Sansó (2026): Testing for Constant Unconditional Variance in Heavy-Tailed Time Series. Communications in Statistics - Simulation and Computation. doi:10.1080/03610918.2026.2615207.
 
   B. Hill (1975): A Simple General Approach to Inference About the Tail of a Distribution. The Annals of Mathematical Statistics 3, 1163-1174.
 

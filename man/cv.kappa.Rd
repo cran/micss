@@ -20,8 +20,9 @@ Critical value.
 Computes critical values for the \link{kappa_test} statistic
 }
 \references{
-J.L. Carrion-i-Silvestre & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
+J.L. Carrion-i-Silvestre & A. Sansó (2026): Testing for Constant Unconditional Variance in Heavy-Tailed Time Series. Communications in Statistics - Simulation and Computation. doi:10.1080/03610918.2026.2615207
 }
+
 \seealso{
 \link{p.val.kappa}
 }

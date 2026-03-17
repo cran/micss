@@ -4,8 +4,9 @@ bibentry(
   bibtype= "Article",
   author = c(person(c("J.", "L."), "Carrion-i-Silvestre"),
              person("Andreu", "Sansó")),
-  title  = "Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series",
-  journal= "Working Paper 2023/09. Research Institute of Applied Economics. University of Barcelona",
-  year   = "2023",
-  textVersion = "Carrion-i-Silvestre, J.l. & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series. Research Institute of Applied Economics. University of Barcelona. Working Paper 2023/09."
+  title  = "Testing for Constant Unconditional Variance in Heavy-Tailed Time Series",
+  journal= "Communications in Statistics - Simulation and Computation",
+  year   = "2026",
+  textVersion = "Carrion-i-Silvestre, J.l. & A. Sansó (2026): Testing for Constant Unconditional Variance in Heavy-Tailed Time Series. Communications in Statistics - Simulation and Computation. doi:10.1080/03610918.2026.2615207.",
+  doi    = "10.1080/03610918.2026.2615207"
 )

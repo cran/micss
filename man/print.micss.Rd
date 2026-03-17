@@ -17,6 +17,9 @@
 \description{
 Prints the output of \link{micss}.
 }
+\references{
+J.L. Carrion-i-Silvestre & A. Sansó (2026): Testing for Constant Unconditional Variance in Heavy-Tailed Time Series. Communications in Statistics - Simulation and Computation. doi:10.1080/03610918.2026.2615207
+}
 \examples{
 set.seed(2)
 e <- c(stats::rnorm(200),3*stats::rnorm(200))

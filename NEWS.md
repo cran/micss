@@ -1,7 +1,7 @@
-# micss 0.2.0
+# micss 0.3.0
 
-### Improved Response surfaces
+### Updated reference
 
-* The response surfaces to compute p-values and critical values are updated. The size and power are improved, specially for large samples.
-
+* The reference paper has been updated.
+* Minor bugs fixed.
 

@@ -1,10 +1,11 @@
 ##
 ## Modified Iterative Cummulative Sum of Squares Algorithm Package
 ##
-## J.L. Carrion-i-Silvestre and A. Sanso (2023): Generalized Extreme Value
-##    Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
+## J.L. Carrion-i-Silvestre and A. Sanso (2026): Testing for Constant
+##      Unconditional Variance in Heavy-Tailed Time Series.
+##      doi:10.1080/03610918.2026.2615207
 ##
-## 22 / 8 / 2024
+## 17 / 3 / 2026
 ##
 
 ##
@@ -43,7 +44,7 @@ kappa_test <- function(e,sig.lev=0.05,alpha=NULL,kmax=NULL){
 #' @seealso \link{p.val.kappa}
 #'
 #' @references
-#' J.L. Carrion-i-Silvestre & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
+#' J.L. Carrion-i-Silvestre & A. Sansó (2026): Testing for Constant Unconditional Variance in Heavy-Tailed Time Series. <doi:10.1080/03610918.2026.2615207>.
 cv.kappa <- function(t,alpha,sig.lev){
   loc <- sr_loc(t,alpha)
   sc <- sr_scale(t,alpha)
@@ -66,7 +67,7 @@ cv.kappa <- function(t,alpha,sig.lev){
 #' @seealso \link{cv.kappa}
 #'
 #' @references
-#' J.L. Carrion-i-Silvestre & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
+#' J.L. Carrion-i-Silvestre & A. Sansó (2026): Testing for Constant Unconditional Variance in Heavy-Tailed Time Series. <doi:10.1080/03610918.2026.2615207>.
 p.val.kappa <- function(x,t,alpha){
   loc <- sr_loc(t,alpha)
   sc <- sr_scale(t,alpha)
@@ -90,7 +91,7 @@ p.val.kappa <- function(x,t,alpha){
 #' @details used internally by \link{cv.kappa} and \link{p.val.kappa}
 #'
 #' @references
-#' J.L. Carrion-i-Silvestre & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
+#' J.L. Carrion-i-Silvestre & A. Sansó (2026): Testing for Constant Unconditional Variance in Heavy-Tailed Time Series. <doi:10.1080/03610918.2026.2615207>.
 #'
 #' @keywords internal
 sr_loc <- function(t,alpha,lmax=NULL){
@@ -117,7 +118,7 @@ sr_loc <- function(t,alpha,lmax=NULL){
 #' @details Used internally by \link{cv.kappa} and \link{p.val.kappa}
 #'
 #' @references
-#' J.L. Carrion-i-Silvestre & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
+#' J.L. Carrion-i-Silvestre & A. Sansó (2026): Testing for Constant Unconditional Variance in Heavy-Tailed Time Series. <doi:10.1080/03610918.2026.2615207>.
 #'
 #' @keywords internal
 sr_scale <- function(t,alpha,lmax=NULL){
@@ -144,7 +145,7 @@ sr_scale <- function(t,alpha,lmax=NULL){
 #' @details Used internally by \link{cv.kappa} and \link{p.val.kappa}
 #'
 #' @references
-#' J.L. Carrion-i-Silvestre & A. Sansó (2023): Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant Unconditional Variance in Heavy-Tailed Time Series.
+#' J.L. Carrion-i-Silvestre & A. Sansó (2026): Testing for Constant Unconditional Variance in Heavy-Tailed Time Series. <doi:10.1080/03610918.2026.2615207>.
 #'
 #' @keywords internal
 sr_shape <- function(t,alpha,lmax=NULL){
@@ -732,7 +733,7 @@ whitening <- function(y,kmax=NULL){
 #' @param kmax Maximum lag to be used for the long-run estimation of the variance.
 #' @return Estimation of the long-run variance.
 #'
-#' @details Estimates the log-run fourth order moment when x are the squares of a variable.
+#' @details Estimates the long-run fourth order moment when x are the squares of a variable.
 #'
 #' @references
 #' D. Sul, P.C.B. Phillips & C.Y. Choi (2005): Prewhitening Bias in HAC Estimation, Oxford Bulletin of Economics and Statistics 67, 517-546.

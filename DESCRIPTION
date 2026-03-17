@@ -1,11 +1,11 @@
 Package: micss
 Type: Package
 Title: Modified Iterative Cumulative Sum of Squares Algorithm
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: c(person("Josep Lluís", "Carrion-i-Silvestre", role = "aut", email = "carrion@ub.edu"),
              person("Andreu", "Sansó", role = c("aut","cre"), email = "andreu.sanso@uib.eu"))
 Maintainer: Andreu Sansó <andreu.sanso@uib.eu>
-Description: Companion package of Carrion-i-Silvestre & Sansó (2023): 
+Description: Companion package of Carrion-i-Silvestre & Sansó (2026): 
   "Generalized Extreme Value Approximation to the CUMSUMQ Test for Constant 
   Unconditional Variance in Heavy-Tailed Time Series". It implements the Modified 
   Iterative Cumulative Sum of Squares Algorithm, which is an extension of 
@@ -15,7 +15,7 @@ Description: Companion package of Carrion-i-Silvestre & Sansó (2023):
   to avoid the size problems when the innovations are non-Gaussian (see, Sansó et al., 2004). 
   Critical values and p-values are generated using a Generalized Extreme Value distribution approach.
   References
-  Carrion-i-Silvestre J.J & Sansó A (2023) <https://www.ub.edu/irea/working_papers/2023/202309.pdf>.
+  Carrion-i-Silvestre J.J & Sansó A (2026) <doi:10.1080/03610918.2026.2615207>.
   Inclan C & Tiao G.C (1994) <doi:10.1080/01621459.1994.10476824>,
   Sansó A & Aragó V & Carrion-i-Silvestre J.L (2004) <https://dspace.uib.es/xmlui/bitstream/handle/11201/152078/524035.pdf>.
 License: GPL-2
@@ -27,8 +27,8 @@ RoxygenNote: 7.2.3
 Suggests: testthat (>= 3.0.0)
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2024-08-22 11:00:17 UTC; HP
+Packaged: 2026-03-17 14:12:39 UTC; HP
 Author: Josep Lluís Carrion-i-Silvestre [aut],
   Andreu Sansó [aut, cre]
 Repository: CRAN
-Date/Publication: 2024-08-22 18:50:02 UTC
+Date/Publication: 2026-03-17 14:30:02 UTC
